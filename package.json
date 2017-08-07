@@ -1,0 +1,31 @@
+{
+  "name": "recipe_app",
+  "version": "1.0.0",
+  "description": "A simple app created in order to learn the food2fork API",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChapmanNitta/Recipe_App.git"
+  },
+  "keywords": [
+    "Food",
+    "Recipes",
+    "Food2Fork"
+  ],
+  "author": "Chapman Nitta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChapmanNitta/Recipe_App/issues"
+  },
+  "homepage": "https://github.com/ChapmanNitta/Recipe_App#readme"
+}
