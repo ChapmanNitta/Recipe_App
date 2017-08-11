@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Recipe Page</title>
+    <link rel="stylesheet" type="text/css" href="../styles/stylesheet.css">
+  </head>
+  <body>
+    <form action="/search" method="get">
+      <input type="text" name="q" placholder="Food Keyword here">
+      <button type="submit">Submit</button>
+    </form>
+    <h1>Recipes</h1>
+    <% for(i = 0; i < data.recipes.length; i++) { %>
+    <div class="recipeCard">
+      <div class="imageCard">
+        <img src= <%= data.recipes[i].image_url %> alt= <%= data.recipes[i].title %>>
+      </div>
+      <div class="recipe">
+        <a href= <%= data.recipes[i].source_url %>> <%= data.recipes[i].title %> </a>
+        <h2> <%= data.recipes[i].social_rank %> </h2>
+      </div>
+    </div>
+    <% } %>
+
+
+
+    <a href="/">Home</a>
+  </body>
+</html>

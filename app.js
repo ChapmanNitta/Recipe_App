@@ -28,6 +28,17 @@ app.get('/', function(req, res) {
   res.render('index')
 })
 
+const searchURL = 'http://food2fork.com/api/search?key='
+
+app.get('/search', function(req, res) {
+  var q = req.query.q;
+  request(searchURL + food2fork.key + '&q=' + q + '&sort=r', function(error, response, body) {
+    var data = JSON.parse(body);
+    res.render('recipes', {data: data})
+    console.log(data)
+  })
+})
+
 app.get('*', function(req, res) {
   res.render('404')
 })
