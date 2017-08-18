@@ -7,22 +7,23 @@
     <link rel="stylesheet" type="text/css" href="../styles/stylesheet.css">
   </head>
   <body>
-    <form action="/search" method="get">
-      <input type="text" name="q" placholder="Food Keyword here">
-      <button type="submit">Submit</button>
-    </form>
-    <h1>Recipes</h1>
-    <% for(i = 0; i < data.recipes.length; i++) { %>
-    <div class="recipeCard">
-      <div class="imageCard">
-        <img src= <%= data.recipes[i].image_url %> alt= <%= data.recipes[i].title %>>
-      </div>
-      <div class="recipe">
-        <a href= <%= data.recipes[i].source_url %>> <%= data.recipes[i].title %> </a>
-        <h2> <%= data.recipes[i].social_rank %> </h2>
+    <div class="container-fluid">
+      <h1>Recipes</h1>
+      <form action="/search" method="get">
+        <input type="text" name="q" placeholder="Food Keyword here">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="container">
+      <div class="row" style="display: flex; flex-wrap: wrap;">
+        <% for(i = 0; i < data.recipes.length; i++) { %>
+          <div class="col-md-3 col-sm-6">
+            <img class='img-thumbnail' src=<%= data.recipes[i].image_url %> alt= <%= data.recipes[i].title %>>
+            <h4 class="card-title"><a href= <%= data.recipes[i].source_url %>> <%= data.recipes[i].title %> </a></h4>
+          </div>
+        <% } %>
       </div>
     </div>
-    <% } %>
 
 
 
